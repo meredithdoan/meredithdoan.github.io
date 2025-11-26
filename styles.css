@@ -335,6 +335,92 @@ section {
     color: var(--secondary-color);
 }
 
+/* Research Section */
+.research {
+    background-color: var(--light-bg);
+}
+
+.research-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.research-intro p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.research-subtitle {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.poster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.poster-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-dark);
+    display: block;
+}
+
+.poster-preview {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--light-bg);
+    border: 2px solid #e2e8f0;
+}
+
+.poster-preview embed {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.poster-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.poster-card:hover .poster-preview {
+    border-color: var(--primary-color);
+}
+
+.poster-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.poster-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.poster-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 /* Skills Section */
 .skills {
     background-color: var(--light-bg);
