@@ -309,6 +309,14 @@ section {
     padding: 2rem;
 }
 
+.project-card-video {
+    padding: 0;
+}
+
+.project-card-video .project-content {
+    padding: 2rem;
+}
+
 .project-title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
