@@ -276,7 +276,7 @@ section {
 }
 
 .project-card {
-    background: var(--white);
+    background:  var(--light-bg);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -364,12 +364,12 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 1000px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .poster-card {
-    background: var(--white);
+    background:  var(--light-bg);
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
