@@ -11,13 +11,13 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Meredith's Portfolio</a>
+            <a href="#home" class="nav-logo" onclick="showHome()">Meredith's Portfolio</a>
             <ul class="nav-menu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link tab-link" onclick="showTab('about')">About</a></li>
+                <li><a href="#projects" class="nav-link tab-link" onclick="showTab('projects')">Projects</a></li>
+                <li><a href="#research" class="nav-link tab-link" onclick="showTab('research')">Research</a></li>
+                <li><a href="#skills" class="nav-link tab-link" onclick="showTab('skills')">Skills</a></li>
+                <li><a href="#contact" class="nav-link tab-link" onclick="showTab('contact')">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -28,186 +28,197 @@
             <h1 class="hero-title">Hi, I'm <span class="highlight">Meredith Doan</span></h1>
             <p class="hero-subtitle">Computer Engineering Student | Aviation & Space Enthusiast | Sustainable AI Advocate</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary" onclick="showTab('projects')">View My Work</a>
+                <a href="#contact" class="btn btn-secondary" onclick="showTab('contact')">Get In Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-images">
-                    <div class="about-image">
-                        <img src="IMG_4944.jpeg" alt="Meredith Doan">
-                    </div>
-                    <div class="about-image">
-                        <img src="IMG_0095.jpeg" alt="Meredith Doan">
-                    </div>
-                </div>
-                <div class="about-text">
-                    <p>I'm a senior at the University of Michigan studying Computer Engineering with interests in AI and embedded software development. My passion lies at the intersection of technology and real-world impact—whether that's advancing AI systems, developing efficient embedded solutions, or exploring applications in aviation and sustainability.</p>
-                    <p>Throughout college, I've gained hands-on experience as a research assistant, instructional aide, and through internships at two companies, where I've developed both my technical skills and collaborative problem-solving abilities. When I'm not coding, you'll find me on a climbing wall, hitting the trails for a run or hike, or skiing down a mountain.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-
-                <div class="project-card project-card-video">
-                    <div class="project-video">
-                        <video autoplay loop muted playsinline>
-                            <source src="SubShort.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">MBUS</h3>
-                        <p class="project-description">The Motorized Ballast Underwater System (MBUS) is a tethered, sensor-driven embedded vehicle designed to demonstrate real-time navigation, 
-                            buoyancy control, and data telemetry. Developed as the final project for EECS 373: Introduction to Embedded System Design, the system combined integrated electronics, motor control, 
-                            sensor processing, CAN communication, and a ground-station interface into a complete embedded platform. My contributions were primarily in firmware development, including thruster control, 
-                            sensor integration, display bring-up, CAN-based telemetry, and major portions of the system’s control logic.</p>
-                        <div class="project-tags">
-                            <span class="tag">Embedded C</span>
-                            <span class="tag">STM32 Development</span>
+   <!-- Tabbed Content Container -->
+    <div class="tabs-container">
+        <!-- About Tab -->
+        <section id="about" class="tab-section">
+            <div class="about">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content">
+                        <div class="about-images">
+                            <div class="about-image">
+                                <img src="IMG_4944.jpeg" alt="Meredith Doan">
+                            </div>
+                            <div class="about-image">
+                                <img src="IMG_0095.jpeg" alt="Meredith Doan">
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="subteam11-373-poster.pdf" class="project-link">Poster →</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3 class="project-title">Project Three</h3>
-                        <p class="project-description">A brief description of your third project. Share what you learned and what makes this project special.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Data</span>
-                            <span class="tag">ML</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Project →</a>
-                            <a href="#" class="project-link">GitHub →</a>
+                        <div class="about-text">
+                            <p>I'm a senior at the University of Michigan studying Computer Engineering with interests in AI and embedded software development. My passion lies at the intersection of technology and real-world impact—whether that's advancing AI systems, developing efficient embedded solutions, or exploring applications in aviation and sustainability.</p>
+                            <p>Throughout college, I've gained hands-on experience as a research assistant, instructional aide, and through internships at two companies, where I've developed both my technical skills and collaborative problem-solving abilities. When I'm not coding, you'll find me on a climbing wall, hitting the trails for a run or hike, or skiing down a mountain.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Research Section -->
-    <section id="research" class="research">
-        <div class="container">
-            <h2 class="section-title">Research</h2>
-            <div class="research-intro">
-                <p>Beginning my sophomore year continuing through my first semester of senior year, I was a research assistant in the
-                    Radiological Health Engineering Lab at the University of Michigan. In the lab, I worked on the Intelligent Radiation
-                    Awareness Drone (iRAD) team supporting various software and hardware projects.</p>
-            </div>
-            <div class="research-posters">
-                <h3 class="research-subtitle">Posters</h3>
-               <div class="poster-grid">
-    <a href="HPS2024poster Doan EnablingAutonomy.pptx.jpg" class="poster-card" target="_blank">
-        <div class="poster-preview">
-            <img src="HPS2024poster Doan EnablingAutonomy.pptx.jpg" alt="Enabling Autonomy poster">
-        </div>
-        <h4>Enabling Autonomy for Intelligent Radiation Awareness Drone-Lite: Open-Source Terrain Following and Collision Avoidance Software using PX4 Autopilot</h4>
-        <p>Brief description of this research</p>
-    </a>
-    <a href="poster22M_Doan.pptx.jpg" class="poster-card" target="_blank">
-        <div class="poster-preview">
-            <img src="poster22M_Doan.pptx.jpg" alt="Affordable Open-Source Drone poster">
-        </div>
-        <h4>Undergraduate Team Design of an Affordable Open-Source 2-kg Payload Radiation Detection Drone</h4>
-        <p>Brief description of this research</p>
-    </a>
-    <a href="MTV2024poster_DoanUpdated.pptx.jpg" class="poster-card" target="_blank">
-        <div class="poster-preview">
-            <img src="MTV2024poster_DoanUpdated.pptx.jpg" alt="Preventing Drone Crashes poster">
-        </div>
-        <h4>Preventing Radiation Drone Crashes: Avoiding Collisions and Following Terrain</h4>
-        <p>Brief description of this research</p>
-    </a>
-    <a href="Final_UROP_Poster.pptx.jpg" class="poster-card" target="_blank">
-        <div class="poster-preview">
-            <img src="Final_UROP_Poster.pptx.jpg" alt="WiFi-Sensing Payload poster">
-        </div>
-        <h4>A WiFi-Sensing Payload for an Intelligent Radiation Awareness Drone (iRAD)</h4>
-        <p>Brief description of this research</p>
-    </a>
-    <a href="MTV2023 Poster DoanVermut.jpg" class="poster-card" target="_blank">
-        <div class="poster-preview">
-            <img src="MTV2023 Poster DoanVermut.jpg" alt="Remote Pilot Certification poster">
-        </div>
-        <h4>Remote Pilot Certification for Safe Legal Operation of an Intelligent Radiation Awareness Drone (iRAD)</h4>
-        <p>Brief description of this research</p>
-    </a>
-    <a href="MTV2023 FinalPoster BeydounDoan.jpg" class="poster-card" target="_blank">
-        <div class="poster-preview">
-            <img src="MTV2023 FinalPoster BeydounDoan.jpg" alt="WiFi-Sensing Payload Preliminary Design poster">
-        </div>
-        <h4>Preliminary Design of a WiFi-Sensing Payload for an Intelligent Radiation Awareness Drone (iRAD)</h4>
-        <p>Brief description of this research</p>
-    </a>
-</div>
-            </div>
-        </div>
-    </section>
+        <!-- Projects Tab -->
+        <section id="projects" class="tab-section">
+            <div class="projects">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card project-card-video">
+                            <div class="project-video">
+                                <video autoplay loop muted playsinline>
+                                    <source src="SubShort.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">MBUS</h3>
+                                <p class="project-description">The Motorized Ballast Underwater System (MBUS) is a tethered, sensor-driven embedded vehicle designed to demonstrate real-time navigation, 
+                                    buoyancy control, and data telemetry. Developed as the final project for EECS 373: Introduction to Embedded System Design, the system combined integrated electronics, motor control, 
+                                    sensor processing, CAN communication, and a ground-station interface into a complete embedded platform. My contributions were primarily in firmware development, including thruster control, 
+                                    sensor integration, display bring-up, CAN-based telemetry, and major portions of the system's control logic.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Embedded C</span>
+                                    <span class="tag">STM32 Development</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="subteam11-373-poster.pdf" class="project-link">Poster →</a>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>C/C++</li>
-                        <li>Python</li>
-                        <li>Julia</li>
-                        <li>MATLAB/Simulink</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <ul>
-                        <li>Git</li>
-                        <li>NXP S32 Design Studio</li>
-                        <li>KiCad</li>
-                    </ul>
+                        <div class="project-card">
+                            <div class="project-content">
+                                <h3 class="project-title">Project Three</h3>
+                                <p class="project-description">A brief description of your third project. Share what you learned and what makes this project special.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Data</span>
+                                    <span class="tag">ML</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link">View Project →</a>
+                                    <a href="#" class="project-link">GitHub →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-text">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-                <div class="contact-links">
-                    <a href="mailto:mgdoan@umich.edu" class="contact-button">
-                        <span>📧</span> Email Me
-                    </a>
-                    <a href="https://github.com/meredithdoan" target="_blank" class="contact-button">
-                        <span>💻</span> GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/mgdoan" target="_blank" class="contact-button">
-                        <span>💼</span> LinkedIn
-                    </a>
+        <!-- Research Tab -->
+        <section id="research" class="tab-section">
+            <div class="research">
+                <div class="container">
+                    <h2 class="section-title">Research</h2>
+                    <div class="research-intro">
+                        <p>Beginning my sophomore year continuing through my first semester of senior year, I was a research assistant in the
+                            Radiological Health Engineering Lab at the University of Michigan. In the lab, I worked on the Intelligent Radiation
+                            Awareness Drone (iRAD) team supporting various software and hardware projects.</p>
+                    </div>
+                    <div class="research-posters">
+                        <h3 class="research-subtitle">Posters</h3>
+                        <div class="poster-grid">
+                            <a href="HPS2024poster Doan EnablingAutonomy.pptx.jpg" class="poster-card" target="_blank">
+                                <div class="poster-preview">
+                                    <img src="HPS2024poster Doan EnablingAutonomy.pptx.jpg" alt="Enabling Autonomy poster">
+                                </div>
+                                <h4>Enabling Autonomy for Intelligent Radiation Awareness Drone-Lite: Open-Source Terrain Following and Collision Avoidance Software using PX4 Autopilot</h4>
+                                <p>Brief description of this research</p>
+                            </a>
+                            <a href="poster22M_Doan.pptx.jpg" class="poster-card" target="_blank">
+                                <div class="poster-preview">
+                                    <img src="poster22M_Doan.pptx.jpg" alt="Affordable Open-Source Drone poster">
+                                </div>
+                                <h4>Undergraduate Team Design of an Affordable Open-Source 2-kg Payload Radiation Detection Drone</h4>
+                                <p>Brief description of this research</p>
+                            </a>
+                            <a href="MTV2024poster_DoanUpdated.pptx.jpg" class="poster-card" target="_blank">
+                                <div class="poster-preview">
+                                    <img src="MTV2024poster_DoanUpdated.pptx.jpg" alt="Preventing Drone Crashes poster">
+                                </div>
+                                <h4>Preventing Radiation Drone Crashes: Avoiding Collisions and Following Terrain</h4>
+                                <p>Brief description of this research</p>
+                            </a>
+                            <a href="Final_UROP_Poster.pptx.jpg" class="poster-card" target="_blank">
+                                <div class="poster-preview">
+                                    <img src="Final_UROP_Poster.pptx.jpg" alt="WiFi-Sensing Payload poster">
+                                </div>
+                                <h4>A WiFi-Sensing Payload for an Intelligent Radiation Awareness Drone (iRAD)</h4>
+                                <p>Brief description of this research</p>
+                            </a>
+                            <a href="MTV2023 Poster DoanVermut.jpg" class="poster-card" target="_blank">
+                                <div class="poster-preview">
+                                    <img src="MTV2023 Poster DoanVermut.jpg" alt="Remote Pilot Certification poster">
+                                </div>
+                                <h4>Remote Pilot Certification for Safe Legal Operation of an Intelligent Radiation Awareness Drone (iRAD)</h4>
+                                <p>Brief description of this research</p>
+                            </a>
+                            <a href="MTV2023 FinalPoster BeydounDoan.jpg" class="poster-card" target="_blank">
+                                <div class="poster-preview">
+                                    <img src="MTV2023 FinalPoster BeydounDoan.jpg" alt="WiFi-Sensing Payload Preliminary Design poster">
+                                </div>
+                                <h4>Preliminary Design of a WiFi-Sensing Payload for an Intelligent Radiation Awareness Drone (iRAD)</h4>
+                                <p>Brief description of this research</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Skills Tab -->
+        <section id="skills" class="tab-section">
+            <div class="skills">
+                <div class="container">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <ul>
+                                <li>C/C++</li>
+                                <li>Python</li>
+                                <li>Julia</li>
+                                <li>MATLAB/Simulink</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Tools & Platforms</h3>
+                            <ul>
+                                <li>Git</li>
+                                <li>NXP S32 Design Studio</li>
+                                <li>KiCad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Tab -->
+        <section id="contact" class="tab-section">
+            <div class="contact">
+                <div class="container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="contact-content">
+                        <p class="contact-text">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+                        <div class="contact-links">
+                            <a href="mailto:mgdoan@umich.edu" class="contact-button">
+                                <span>📧</span> Email Me
+                            </a>
+                            <a href="https://github.com/meredithdoan" target="_blank" class="contact-button">
+                                <span>💻</span> GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/mgdoan" target="_blank" class="contact-button">
+                                <span>💼</span> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
