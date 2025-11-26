@@ -249,7 +249,7 @@ section.hero {
 
 /* About Section */
 .about {
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
 }
 
 .about-content {
@@ -401,7 +401,7 @@ section.hero {
 
 /* Research Section */
 .research {
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
 }
 
 .research-intro {
@@ -489,7 +489,7 @@ section.hero {
 
 /* Skills Section */
 .skills {
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
 }
 
 .skills-grid {
@@ -540,8 +540,7 @@ section.hero {
 
 /* Contact Section */
 .contact {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: var(--white);
+    background-color: var(--dark-bg);
 }
 
 .contact .section-title {
