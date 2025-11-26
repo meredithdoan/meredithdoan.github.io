@@ -195,14 +195,21 @@ body {
 /* Tabs Container */
 .tabs-container {
     display: block;
+    min-height: 100vh;
 }
 
 .tab-section {
     display: none;
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
 }
 
 .tab-section.active {
     display: block;
+}
+
+.tab-section > div {
+    padding: 3rem 0;
 }
 
 .nav-link.active {
@@ -215,7 +222,11 @@ body {
 
 /* Section Styles */
 section {
-    padding: 5rem 0;
+    padding: 0;
+}
+
+section.hero {
+    padding: 2rem;
 }
 
 .section-title {
