@@ -192,6 +192,27 @@ body {
     transform: translateY(-3px);
 }
 
+/* Tabs Container */
+.tabs-container {
+    display: block;
+}
+
+.tab-section {
+    display: none;
+}
+
+.tab-section.active {
+    display: block;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
 /* Section Styles */
 section {
     padding: 5rem 0;
