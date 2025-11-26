@@ -88,3 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 });
+
+// Toggle project description box
+function toggleProject(projectId) {
+    const content = document.getElementById(projectId);
+    const btn = content.querySelector('.collapse-btn');
+    
+    content.classList.toggle('collapsed');
+    
+    if (content.classList.contains('collapsed')) {
+        btn.textContent = '+';
+    } else {
+        btn.textContent = '−';
+    }
+}
