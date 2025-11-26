@@ -310,11 +310,17 @@ section {
 }
 
 .project-card-video {
-    padding: 0;
+    padding: 0 !important;
+    overflow: hidden;
 }
 
 .project-card-video .project-content {
     padding: 2rem;
+}
+
+.project-card-video .project-video {
+    margin: 0;
+    border-radius: 0;
 }
 
 .project-title {
