@@ -284,6 +284,36 @@ section.hero {
     margin-bottom: 1.5rem;
     color: var(--white);
 }
+.alt-layout {
+    position: relative;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.about-text-card {
+    background: var(--light-bg);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    z-index: 2;
+    position: relative;
+}
+
+.about-float {
+    width: 220px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: var(--shadow-lg);
+    z-index: 3;
+}
+
+.about-float.left { left: -40px; }
+.about-float.right { right: -40px; }
+
 
 /* Projects Section */
 .projects {
