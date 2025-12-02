@@ -233,7 +233,6 @@ section.hero {
 }
 
 /* About Section */
-/* About Section */
 .about {
     background-color: var(--dark-bg);
 }
@@ -244,17 +243,12 @@ section.hero {
     display: grid;
     grid-template-columns: 300px 1fr 300px;
     gap: 0;
-    align-items: center;
-}
-
-.about-images {
-    display: contents;
+    align-items: stretch;
 }
 
 .about-image {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
-    height: 400px;
 }
 
 .about-image:first-child {
@@ -276,7 +270,6 @@ section.hero {
     background: var(--light-bg);
     padding: 2rem 3rem;
     box-shadow: var(--shadow-lg);
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
