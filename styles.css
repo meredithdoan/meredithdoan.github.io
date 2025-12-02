@@ -320,6 +320,19 @@ section.hero {
 .about-float.left { left: -40px; }
 .about-float.right { right: -40px; }
 
+.resume-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.resume-container embed {
+    width: 80%;
+    height: 800px;      /* adjust if needed */
+    border-radius: 12px;
+}
+
+
 
 /* Projects Section */
 .projects {
