@@ -246,6 +246,12 @@ section.hero {
     box-shadow: var(--shadow-lg);
 }
 
+.about-content.alt-layout {
+    overflow: visible;       /* let the side images extend past the card */
+    box-shadow: none;        /* optional: card shadow comes from .about-text-card */
+}
+
+
 .about-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
